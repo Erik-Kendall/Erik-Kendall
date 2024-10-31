@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>LifeSpring Pharma</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="auth.html">Log In</a></li>
+            <li><a href="consent.html">Consent Renewal</a></li>
+            <li><a href="help.html">Help/Support</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <header>
+            <h1>Log In</h1>
+        </header>
+        
+        <section>
+            <form action="/login" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Log In</button>
+
+                <!-- Forgot Password Link -->
+                <p><a href="forgot-password.html" class="forgot-password">Forgot Password?</a></p>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
+

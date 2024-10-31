@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consent Renewal</title>
+    <link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>LifeSpring Pharma</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="auth.html">Log In</a></li>
+            <li><a href="consent.html">Consent Renewal</a></li>
+            <li><a href="help.html">Help/Support</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <header>
+            <h1>Consent Renewal</h1>
+        </header>
+        <section>
+            <p>Please review and renew your consent below:</p>
+            <form id="consentForm">
+                <input type="checkbox" id="consent" required>
+                <label for="consent">I agree to the terms and conditions</label>
+                <!-- Link styled as a button, with JavaScript to handle consent -->
+                <a href="#" onclick="checkConsent(event)" class="consent-link">Renew Consent</a>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        function checkConsent(event) {
+            event.preventDefault();
+            if (document.getElementById('consent').checked) {
+                // Store consent status in localStorage
+                localStorage.setItem('consentGiven', 'true');
+                // Redirect to confirmation page after consenting
+                window.location.href = "confirmation.html";
+            } else {
+                alert("Please check the consent box to continue.");
+            }
+        }
+    </script>
+</body>
+</html>
+
